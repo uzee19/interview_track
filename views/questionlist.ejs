@@ -1,0 +1,27 @@
+
+<style>
+ .css{
+    font-family:helvetica;
+     text-transform:uppercase;
+     font-weight: bold;
+ }  
+    
+</style>
+<br>
+<% questionbytopic.forEach(questions => { %>
+    <div>
+        <% if(questions.approved) {%>
+       
+        <div class="card" style="height:5rem">
+            <div class="card-body css">
+                
+                <%= questions.name %><div class="float-right"><a href="<%= questions.linkto %>" target="_blank"><button class="btn btn-outline-primary">View Question</button></a></div>
+            </div>
+          </div>
+          <br>
+        <% } %>
+    
+
+    </div>
+
+<%})%>

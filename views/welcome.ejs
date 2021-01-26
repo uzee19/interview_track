@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    .customborder {
+        border-radius: 2%;
+        border: 2px solid rgb(29, 26, 26);
+    }
+    .topiclist a{
+      color: red !important;
+    font-family: helvetica;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+    
+</style>
+</head>
+<body>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto ">
+      <div class="card card-body text-center customborder">
+        <h1><i class="fas fa-code fa-3x"></i></h1>
+        <p>Create an account or login</p>
+        <a href="/users/register" class="btn btn-outline-primary btn-block mb-2"
+          >Register</a
+        >
+        <a href="/users/login" class="btn btn-outline-success btn-block">Login</a>
+      </div>
+      <br>
+      <div  class="text-center topiclist"><a href="/topics" >Interview Questions</a></div>
+    </div>
+  </div>
+</body>
+</html>
