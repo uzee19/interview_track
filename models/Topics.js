@@ -7,6 +7,10 @@ const TopicSchema = new mongoose.Schema({
       },
       imgurl:{
         type:String
+      },
+      date: {
+        type: Date,
+        default: Date.now
       }
 });
 

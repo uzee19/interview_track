@@ -12,7 +12,7 @@ router.get('/', ensureAuthenticated,async (req,res)=>{
     searchOptions.name = new RegExp(req.query.name, 'i')
   }
     try{
-        const topics = await Topic.find(searchOptions).sort({name:'desc'});
+        const topics = await Topic.find(searchOptions).sort({name:'asc'});
         const question = new Question()
         res.render('topiclist',{
             topics:topics,
@@ -26,13 +26,14 @@ router.get('/', ensureAuthenticated,async (req,res)=>{
     }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', ensureAuthenticated,async (req, res) => {
   try {
     const topic = await Topic.findById(req.params.id)
-    const questions = await Question.find({ topics: topic.id }).exec()
+    const questions = await Question.find({ topics: topic.id }).sort({name:'asc'}).exec()
     res.render('questionlist', {
       topic:topic,
-      questionbytopic: questions
+      questionbytopic: questions,
+      user:req.user
     })
   } catch {
     res.redirect('/')
