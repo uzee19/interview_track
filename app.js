@@ -15,6 +15,8 @@ AdminBro.registerAdapter(AdminBroMongoose)
 const User = require('./models/Users');
 const Topic = require('./models/Topics');
 const Question = require('./models/Questions');
+const Company=require('./models/Companies');
+const Exp = require('./models/Exps');
 
 const app = express();
 const bodyParser = require('body-parser');
@@ -40,7 +42,7 @@ mongoose.connect(db,{
 //EJS
 app.use(expressLayouts);
 app.set('view engine','ejs');
-app.set("layout login", false);
+
 
 // Express session
 app.use(
@@ -99,7 +101,7 @@ app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
 //app.use('/admin', require('./routes/admin'));
 app.use('/topics',require('./routes/topics'));
-
+app.use('/comps',require('./routes/comp'));
 
 
 

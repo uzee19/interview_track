@@ -1,6 +1,7 @@
 
 <style> 
 
+
   .pointer-link { 
       cursor: pointer; 
   } 
@@ -26,17 +27,18 @@
 }
 
 </style>
+
 <%- include("./partials/navbar"); %>
 
 
 
-<%- include("./searchbar"); %>
+<div style="margin-left:14px;"><%- include("./searchbar"); %></div>
 
 <div style="width:30%"><%- include ("./partials/messages"); %></div>
 
 
 <button class="btn btn-outline-success mb-2" data-target="#mymodel" 
-data-toggle="modal" >Add Questions</button>
+data-toggle="modal" style="margin-left: 14px;" >Add Questions</button>
 <div class="modal fade" id="mymodel">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -101,7 +103,7 @@ data-toggle="modal" >Add Questions</button>
      <%})%>
   </div>
 </div>
-
+<%- include("./partials/footer"); %>
 
 
 

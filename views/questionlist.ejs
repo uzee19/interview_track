@@ -5,10 +5,16 @@
      text-transform:uppercase;
      font-weight: bold;
  }  
-    
+ #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+              /* Footer height */
+}
 </style>
 <%- include("./partials/navbar"); %>
 
+<div>
 <% questionbytopic.forEach(questions => { %>
     <div>
         <% if(questions.approved) {%>
@@ -26,3 +32,5 @@
     </div>
 
 <%})%>
+<footer id="footer"><%- include("./partials/footer"); %></footer>
+</div>

@@ -3,7 +3,13 @@
 <head>
 	<title>Sliding Login Form</title>
 	<%- include ("./partials/styles"); %>
-	
+	<style>
+		.img-logo{
+			border-radius: 50%;
+			height:230px;
+			width:230px;
+		}
+	</style>
 </head>
 <body>
     <%- include ("./partials/messages"); %>
@@ -83,11 +89,13 @@
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-left">
+					
 					<h1>Welcome Back!</h1>
 					<p>Already Registered? Sign In here</p>
 					<button id="signIn">Sign In</button>
 				</div>
 				<div class="overlay-right">
+					
 					<h1>Hi There!</h1>
 					<p>Enter your personal details and start journey with us</p>
 					<button id="signUp">Sign Up</button>

@@ -1,19 +1,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script defer src="/javascripts/fileUpload.js"></script>
     <script src="https://kit.fontawesome.com/1d65063a61.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
     
+
     <title>Interview Tracker</title>
     <link rel = "icon" href =  "<%- include ("./partials/titlelogo"); %>"
 
         type = "image/x-icon">
 </head>
+<style>
+  
+</style>
 <body>
-    <div class="container">
+    <div >
         <%- body %>
     </div>
+
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -31,5 +44,7 @@
     ></script>        
     <!-- these are JS required for flash messages
      -->
+     
 </body>
+
 </html>
