@@ -41,7 +41,9 @@ mongoose.connect(db,{
 
 //EJS
 app.use(expressLayouts);
+app.use(express.static("views"));
 app.set('view engine','ejs');
+
 
 
 // Express session

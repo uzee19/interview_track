@@ -1,0 +1,36 @@
+
+<style>
+    .css{
+       font-family:helvetica;
+        text-transform:uppercase;
+        font-weight: bold;
+    }  
+    #footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+                 /* Footer height */
+   }
+   </style>
+   <%- include("./partials/navbar"); %>
+   
+   <div>
+   <% expbycompany.forEach(exps => { %>
+       <div>
+           <% if(exps.approved) {%>
+          
+           
+                   
+                <%= exps.name %><br>
+                <img src="/public/uploads/<%= exps.img %>">
+               
+             <br>
+           <% } %>
+       
+   
+       </div>
+   
+   <%})%>
+   <footer id="footer"><%- include("./partials/footer"); %></footer>
+   </div>
+   

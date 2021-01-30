@@ -9,12 +9,12 @@ const path = require('path');
 
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-router.use(express.static(__dirname+"./public/"));
+router.use(express.static(__dirname+"./views/public/"));
 
 
 
 var Storage= multer.diskStorage({
-  destination:"./public/uploads/",
+  destination:"./views/public/uploads/",
   filename:(req,file,cb)=>{
     cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname));
   }
@@ -51,14 +51,14 @@ router.get('/', ensureAuthenticated,async (req,res)=>{
     }
 });
 
-router.post('/', async (req,res)=>{
+router.post('/',upload, async (req,res)=>{
   const exp = new Exp({
     name: req.body.name,
     branch: req.body.branch,
     year:req.body.year,
     company: req.body.company,
     exp:req.body.exp,
-    image:req.body.file
+    img:req.file.filename
     
   })
   try{
@@ -78,4 +78,19 @@ router.post('/', async (req,res)=>{
     
   }
 });
+
+router.get('/:id', ensureAuthenticated,async (req, res) => {
+  try {
+    const company = await Company.findById(req.params.id)
+    const exps = await Exp.find({ company: company.id }).sort({name:'asc'}).exec()
+    res.render('explist', {
+      company:company,
+      expbycompany: exps,
+      user:req.user
+    })
+    
+  } catch {
+    res.redirect('/')
+  }
+})
 module.exports = router;
