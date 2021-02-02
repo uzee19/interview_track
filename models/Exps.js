@@ -6,8 +6,8 @@ const ExpSchema = new mongoose.Schema({
         required: true
       },
     img:{
-        type:String
-        
+        type:String,
+        req:true
 
     },
     branch:{
@@ -25,6 +25,10 @@ const ExpSchema = new mongoose.Schema({
         req:true
         
     },
+    intro: {
+        type: String,
+        required: true
+      },
     exp:{
         type:String,
         req:true

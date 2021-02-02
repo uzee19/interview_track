@@ -58,6 +58,7 @@ router.post('/',upload, async (req,res)=>{
     year:req.body.year,
     company: req.body.company,
     exp:req.body.exp,
+    intro:req.body.intro,
     img:req.file.filename
     
   })
