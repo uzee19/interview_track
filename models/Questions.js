@@ -20,6 +20,10 @@ const QuestionSchema = new mongoose.Schema({
         required:true,
         default:false
 
+    },
+    date: {
+      type: Date,
+      default: Date.now
     }
 });
 const Question = mongoose.model('Question',QuestionSchema);

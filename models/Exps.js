@@ -39,7 +39,12 @@ const ExpSchema = new mongoose.Schema({
         required:true,
         default:false
 
-    }
+    },
+    
+  date: {
+    type: Date,
+    default: Date.now
+  }
 });
 const Exp = mongoose.model('Exp',ExpSchema);
 module.exports = Exp;
