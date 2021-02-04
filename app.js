@@ -79,7 +79,7 @@ const adminBro = new AdminBro({
 
 // const router = AdminBroExpress.buildRouter(adminBro)
 const ADMIN = {
-  email:require('./config/keys').ADMIN_EMAIL  ,
+  email:require('./config/keys').ADMIN_EMAIL,
   password: require('./config/keys').ADMIN_PASSWORD,
 }
 

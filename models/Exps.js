@@ -41,7 +41,7 @@ const ExpSchema = new mongoose.Schema({
 
     },
     
-  date: {
+  date:{
     type: Date,
     default: Date.now
   }
