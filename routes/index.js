@@ -6,8 +6,8 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
 
 // Dashboard
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
-  res.render('dashboard', {
+router.get('/topics', ensureAuthenticated, (req, res) =>
+  res.render('topics', {
     user: req.user
   })
 );
