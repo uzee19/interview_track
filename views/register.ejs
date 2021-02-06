@@ -3,6 +3,13 @@
 <head>
 	<title>Sliding Login Form</title>
 	<%- include ("./partials/styles"); %>
+	<style>
+		i {
+    margin-left: 240px;
+	margin-top: -35px;
+    cursor: pointer;
+}
+	</style>
 	
 </head>
 <body>
@@ -27,9 +34,9 @@
               type="password"
               id="password"
               name="password"
-              class="form-control"
+              class="form-control eyelash"
               placeholder="Enter Password"
-            />
+            /><i class="far fa-eye" id="togglePassword"></i>
 				<br>
 				<button>Sign In</button>
 				
@@ -106,6 +113,18 @@
 		signInButton.addEventListener('click', () => {
 			main.classList.remove("right-panel-active");
 		});
+	</script>
+	<script type="text/javascript">
+		const togglePassword = document.querySelector('#togglePassword');
+		const password = document.querySelector('.eyelash');
+		togglePassword.addEventListener('click', function (e) {
+    	// toggle the type attribute
+    	const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+   	 	password.setAttribute('type', type);
+    	// toggle the eye slash icon
+    	this.classList.toggle('fa-eye-slash');
+});
+
 	</script>
 </body>
 </html>
