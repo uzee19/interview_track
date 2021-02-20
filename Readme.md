@@ -1,5 +1,6 @@
 # Interview_tracker
-This project was done under guidance of coding club of IIT Guwahati. Server side programming was done on nodejs. In this we basically make a web app where one has to register himself/herself on the server by giving his/her details, after which they can practice problems under different tags related to cp.They can also read intern experience of various students and can upload the their own experience also if they want. 
+This project was done under guidance of coding club of IIT Guwahati. Server side programming was done on nodejs. In this we basically made a web app where one has to register on the server by giving their details, after which they can practice problems under different tags related to CP.They can also read intern experience of various students and can upload the their own experience also if they want. 
+<b>Deployed version </b> - https://your-prep-partner.herokuapp.com/
 
 ## Dependencies used:
 
@@ -46,19 +47,27 @@ By the way if you want , you can also contribute by adding questions that you th
 
 Inorder to run the website locally on your computer , follow the steps given below:
 
-* Download the files from the github repo.
-* Go into the downloaded folder and run the command 
+* Clone this github repo.
+* Go to the downloaded directory open the terminal and run this command 
 
-`npm install`
+```sh
+ npm install
+```
 
 * The above command will install all the required packages and dependencies required for the project 
 * The final step is to run the following command
 
-`npm run dev`
+```sh
+$ npm start
+# Or run with Nodemon
+$ npm run dev
 
- After doing the above steps go to your browser and type localhost:5000.
+# Visit http://localhost:5000
+```
+
+
  
- Before that you have to make a keys.js file in config folder which contain your database details like this:
+ Before that open "config/keys.js" and add your MongoDB URI  which contain your database details like this:
  `module.exports = {
     MongoURI : 'mongodb+srv://<user>:password@cluster08451.am7f4.mongodb.net/<name of database>?retryWrites=true&w=majority'
 }`
