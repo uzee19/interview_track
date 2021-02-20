@@ -2,7 +2,7 @@
 This project was done under guidance of coding club of IIT Guwahati. Server side programming was done on nodejs. In this we basically made a web app where one has to register on the server by giving their details, after which they can practice problems under different tags related to CP. They can also read intern experience of various students and can upload the their own experience also if they want. We have also deployed this web app using heroku. <br>
 <b>Deployed version </b> - https://your-prep-partner.herokuapp.com/
 
-## Dependencies used:
+## Dependencies used
 
    * [Mongoose](https://mongoosejs.com/docs/)
    * [EJS](https://ejs.co/)
@@ -63,12 +63,12 @@ Inorder to run the website locally on your computer , follow the steps given bel
 # Or run with Nodemon
  npm run dev
 
-# Visit http://localhost:5000
-```
+ ```
+ `Visit http://localhost:5000`
 
 
  
- Before that open "config/keys.js" and add your MongoDB URI  which contain your database details like this:
+ Before that open "config/keys.js" and add your MongoDB URI :<br>
  `module.exports = {
     MongoURI : 'mongodb+srv://<user>:password@cluster08451.am7f4.mongodb.net/<name of database>?retryWrites=true&w=majority'
 }`
