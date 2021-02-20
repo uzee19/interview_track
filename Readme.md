@@ -22,7 +22,7 @@ This project was done under guidance of coding club of IIT Guwahati. Server side
 
 ## User Panel(Programming-Practice)
 *You can practice questions related to all the topics mentioned. 
-You can also contribute by adding questions that you think would be helpful for others*
+You can also contribute by adding questions that you think would be helpful for others.*
 ![3](https://user-images.githubusercontent.com/62893472/108601516-f23f0c80-73c2-11eb-9492-b408083417ca.png)
 
 
