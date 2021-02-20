@@ -59,9 +59,9 @@ Inorder to run the website locally on your computer , follow the steps given bel
 * The final step is to run the following command
 
 ```sh
-$ npm start
+ npm start
 # Or run with Nodemon
-$ npm run dev
+ npm run dev
 
 # Visit http://localhost:5000
 ```
