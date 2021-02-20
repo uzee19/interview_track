@@ -24,12 +24,7 @@ var upload = multer({
   storage:Storage
 }).single('file');
 
-router.get('/uploads',(req,res)=>{
-  res.render('upload-file');
-});
-router.post('/uploads',upload,(req,res)=>{
-  res.render('upload-file');
-})
+
 router.get('/', ensureAuthenticated,async (req,res)=>{
     let searchOptions = {}
   if (req.query.name != null && req.query.name !== '') {
