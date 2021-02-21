@@ -10,6 +10,34 @@ This project was done under guidance of coding club of IIT Guwahati. Server side
    * [Passport](http://www.passportjs.org/docs/)
    * [Admin-bro](https://adminbro.com/section-modules.html)
    * [Multer](https://www.npmjs.com/package/multer)
+## Usage
+
+Inorder to run the website locally on your computer , follow the steps given below:
+
+* Clone this github repo.
+* Open the terminal and change the directory to the downloaded folder then run the command 
+
+```sh
+ npm install
+```
+
+* The above command will install all the required packages and dependencies required for the project 
+* The final step is to run the following command
+
+```sh
+ npm start
+# Or run with Nodemon
+ npm run dev
+
+ ```
+ `Visit http://localhost:5000`
+
+
+ 
+ Before that open "config/keys.js" and add your MongoDB URI :<br>
+ `module.exports = {
+    MongoURI : 'mongodb+srv://<user>:password@cluster08451.am7f4.mongodb.net/<name of database>?retryWrites=true&w=majority'
+}`
 
 ## Welcome page
 ![1](https://user-images.githubusercontent.com/62893472/108601451-a724f980-73c2-11eb-9440-28a86f22d005.png)
@@ -46,32 +74,6 @@ You can also contribute by adding questions that you think would be helpful for 
 
 ![8](https://user-images.githubusercontent.com/62893472/108601541-0be05400-73c3-11eb-8757-d522580c2831.png)
 
-Inorder to run the website locally on your computer , follow the steps given below:
-
-* Clone this github repo.
-* Open the terminal and change the directory to the downloaded folder then run the command 
-
-```sh
- npm install
-```
-
-* The above command will install all the required packages and dependencies required for the project 
-* The final step is to run the following command
-
-```sh
- npm start
-# Or run with Nodemon
- npm run dev
-
- ```
- `Visit http://localhost:5000`
-
-
- 
- Before that open "config/keys.js" and add your MongoDB URI :<br>
- `module.exports = {
-    MongoURI : 'mongodb+srv://<user>:password@cluster08451.am7f4.mongodb.net/<name of database>?retryWrites=true&w=majority'
-}`
 
  
  > This web app was built by me and my team :
