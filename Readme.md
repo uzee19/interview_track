@@ -49,7 +49,7 @@ You can also contribute by adding questions that you think would be helpful for 
 Inorder to run the website locally on your computer , follow the steps given below:
 
 * Clone this github repo.
-* Go to the downloaded directory open the terminal and run the command 
+* Open the terminal and change the directory to the downloaded folder then run the command 
 
 ```sh
  npm install
