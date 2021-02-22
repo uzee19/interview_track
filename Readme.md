@@ -77,9 +77,9 @@ You can also contribute by adding questions that you think would be helpful for 
 
  
  > This web app was built by me and my team :
-   * Pranshu Dahiya(https://github.com/PDahiya123)
-   * Mesharya M Choudhary
-   * Ujjwal Ranjan
+   * [Pranshu Dahiya](https://github.com/PDahiya123)
+   * [Mesharya M Choudhary](https://github.com/mesharyachoudhary/)
+   * [Ujjwal Ranjan](https://github.com/uzee19/)
  
  
 
