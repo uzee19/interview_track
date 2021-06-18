@@ -12,24 +12,21 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 router.use(express.static(__dirname+"./views/public/"));
 
 
-
 var Storage= multer.diskStorage({
   destination:"./views/public/uploads/",
+ 
   filename:(req,file,cb)=>{
     cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname));
   }
+
+
 });
 
 var upload = multer({
   storage:Storage
 }).single('file');
 
-router.get('/uploads',(req,res)=>{
-  res.render('upload-file');
-});
-router.post('/uploads',upload,(req,res)=>{
-  res.render('upload-file');
-})
+
 router.get('/', ensureAuthenticated,async (req,res)=>{
     let searchOptions = {}
   if (req.query.name != null && req.query.name !== '') {
@@ -69,6 +66,7 @@ router.post('/',upload, async (req,res)=>{
     {
       req.flash('success_msg','Experience is sent for approval !');
       res.redirect('/comps');
+      
     }
     
   }
