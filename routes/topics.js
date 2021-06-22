@@ -64,3 +64,40 @@ router.post('/', async (req,res)=>{
 });
 
 module.exports = router;
+
+router.get('/like/:id', ensureAuthenticated,async (req, res) => {
+  //console.log("k");
+  //console.log(req.params.id);
+  try {
+    const question = await Question.findById(req.params.id)
+    user=req.user
+    let liked = false; 
+    let temp=[];
+    if(question.liked.includes(user.id)){
+      for(let i=0; i<question.liked.length; i++){
+        if(question.liked[i]!=user.id){
+          temp.push(question.liked[i]);
+        }
+      }
+    }
+    else{
+      //console.log(question.liked);
+      temp=question.liked;
+      temp.push(user.id);
+      liked=true;
+      //question.difficulty=3;
+     // console.log(question.liked);
+    }
+    question.liked=temp;
+    //console.log(temp);
+    question.save();
+    resp = {
+      'liked':liked,
+      }
+    res.json(resp);
+  } catch {
+    res.redirect('/')
+  }
+})
+
+module.exports = router;

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Topic = require('./Topics');
+const User = require('./Users');
 const QuestionSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -24,7 +25,13 @@ const QuestionSchema = new mongoose.Schema({
     date: {
       type: Date,
       default: Date.now
-    }
+    },
+    liked:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        }
+    ]
 });
 const Question = mongoose.model('Question',QuestionSchema);
 module.exports = Question;
