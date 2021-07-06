@@ -12,7 +12,7 @@ This project was done under guidance of coding club of IIT Guwahati. Server side
    * [Multer](https://www.npmjs.com/package/multer)
 ## Usage
 
-Inorder to run the website locally on your computer , follow the steps given below:
+In order to run the website locally on your computer , follow the steps given below:
 
 * Clone this github repo.
 * Open the terminal and change the directory to the downloaded folder then run the command 
