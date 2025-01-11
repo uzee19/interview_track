@@ -1,7 +1,5 @@
 # Interview Tracker
-This project was done under guidance of coding club of IIT Guwahati. Server side programming was done on nodejs. In this we basically made a web app where one has to register on the server by giving their details, after which they can practice problems under different tags related to CP. They can also read intern experience of various students and can upload the their own experience also if they want. We have also deployed this web app using heroku. <br><br>
-<b>Deployed version </b> - https://your-prep-partner.herokuapp.com/
-
+This project was done under guidance of coding club of IIT Guwahati. Server side programming was done on nodejs. In this we basically made a web app where one has to register on the server by giving their details, after which they can practice problems under different tags related to CP. They can also read intern experience of various students and can upload the their own experience also if they want.
 ## Dependencies used
 
    * [Mongoose](https://mongoosejs.com/docs/)
